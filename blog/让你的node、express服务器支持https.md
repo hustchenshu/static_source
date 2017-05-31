@@ -21,16 +21,17 @@ http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建
 **申请的流程这里稍微要注意一点的是域名验证当中的证书路径，具体流程参考[使用教学](http://www.chinaz.com/web/2016/0216/504896.shtml)**
 
 + 1.在主页直接输入域名
-![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer_1.png)
 
 + 2。域名验证，这里我们选择Manual Verification
-![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer-2.png)
 
 + 3.下载下图中的两个文件，将这两个文件放置到服务器的静态路径的跟目录，
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer-3.png)
 例如：我的服务器系统结构如下，而且在index文件当中定义了静态路径为public/pages，因此我们需要在这里进行操作，即在pages文件夹下面新建文件.well-known，然后在.well-known文件夹下面新建文件夹acme-challenge，最后将之前下载的两个验证文件放入到acme-challenge文件夹中；
-![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer-4.png)
 + 4.当验证通过，打包下载给出的3个文件，如下：
-![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer-5.png)
 + 5.将下载下来的3个文件上传的服务器，这里我放置在服务器根目录新建的key文件夹
 
 # 修改启动文件
@@ -105,10 +106,14 @@ httpsServer.listen(443, function() {
 
 # 总结
 最后打开网页查看，完美支持
+
 + http访问
-![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
+
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer-6.png)
+
 + https访问
-![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
+
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//cer-7.png)
 
 
 
