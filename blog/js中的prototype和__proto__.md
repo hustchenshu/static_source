@@ -1,4 +1,4 @@
-# Js中的prototype和__proto__
+﻿# Js中的prototype和__proto__
 
 ## <div style="background-color:#2d2d2d;color:white">原型对象prototype</div>
 无论什么时候，当创建了一个函数，那么该函数将会自动创建一个prototype属性，这个属性指向函数的原型对象。而原型对象都会自动获得一个construct属性，该属性指向prototype属性所在函数；
@@ -14,7 +14,7 @@ Person.prototype.sayName = function(){
 ```
   那么，我们可以通过试验知道如下：
 Person具有一个prototype属性，他指向一个原型对象，我们叫他Person Prototype，那么代码中我们给这个原型对象加上了name属性和一个sayName方法；所以他们之间的关系如下：
-![avatar](images/Person.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//Person.jpg)
 
 ## <div style="background-color:#2d2d2d;color:white">【【prototype】】 或者__proto__</div>
 
@@ -25,7 +25,7 @@ Person具有一个prototype属性，他指向一个原型对象，我们叫他Pe
 var person2 = new Person();
 ```
 这里我们构建了2个Person实例，他们之间的关系如下：
-![avatar](images/instance.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//instance.jpg)
 
 ## <div style="background-color:#2d2d2d;color:white">原型继承</div>
 说到原型，就不得不说继承，废话不多说，直接上代码解析；
@@ -40,7 +40,7 @@ var person2 = new Person();
 ```
 
 这里的意愿是让worker继承自Person，因此将worker的prototype属性设置为一个Person实例，根据上面的分析可以得到以下联系：
-![avatar](images/jicheng.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//jicheng.jpg)
 
 ## <div style="background-color:#2d2d2d;color:white">Object、Function和Array之间的联系</div>
 这里我们只是追溯到了Person的原型对象，如果再跟着原型链往下跟进呢，我们可以试试看：
@@ -66,9 +66,9 @@ Array.prototype.__proto__===Object.prototype
 true
 ```
 
-![avatar](images/object_function_array.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//object_function_array.jpg)
 
 
 ##  <div style="background-color:#2d2d2d;color:white">汇总</div>
 将以上代码汇总到一起，并绘制他们之间的关系图如下：
-![avatar](images/all.jpg)
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//all.jpg)
