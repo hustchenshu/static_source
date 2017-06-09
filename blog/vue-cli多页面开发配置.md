@@ -183,7 +183,8 @@ var webpackConfig = merge(baseWebpackConfig, {
 首先根据之前的单页面配置可以知道，每个页面需要有自己的入口文件，模板、输入输出文件配置等，所以第一步：创建所需文件，在/src文件夹下面建立文件，分别为admin-main.js和Admin.vue分别对应的是后台管理页面的入口文件和该页面的最高组件，还需要在/src/router文件夹下面建立admin页面的路由文件admin.js[内容参照/src/router.index.js],最后在根目录下新建admin页面的html模板admin.html【内容参照/index.html】
 
 完成后的diamante结构如下：
-[!avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images//muti-1.png)
+
+![avatar](https://raw.githubusercontent.com/hustchenshu/static_source/master/blog/images/muti-1.png)
 
 ### 2.2 修改配置文件
 
