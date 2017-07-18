@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset="utf-8">
+	<style>
+		.paa:after{
+			content: '';
+			clear: both;
+		}
+		.clearfix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+	</style>
+</head>
+<body>
+	<div class="container" style="display:table;width:100%;height:100%;border:solid red">
+	    <div class="row" style="display:table-row;">
+	        <div class="main" style="display:table-cell;vertical-align:top;border:solid green;">main面板：没有设置宽度，自动调整填充剩余部分</div>
+	        <div class="sidebar" style="display:table-cell;vertical-align:top;border:solid yellow;width:200px;">sidebar面板：固定宽度200px</div>
+	    </div>
+	</div>
+	<div class="pa" style="position: relative; border:5px solid gold;">
+		<div class="son" style="float:left;position:absolute;left:50%; transform:translate(-50%);">sdfsadf</div>
+		<div style="clear:both;">ss</div>
+	</div>
+	<h1>去除浮动：父对象设定高度</h1>
+	<div class="pa" style="border:5px solid gold;height:30px;">
+
+		<div class="son" style="float:right;">sdfsadf</div>
+	</div>
+	<h1>去除浮动：after伪类定义</h1>
+	<div class="clearfix" style="border:5px solid gold;">
+		<div class="son" style="float:right;">sdfsadf</div>
+	</div>
+	<h1>去除浮动：clear</h1>
+	<div class="pa" style="border:5px solid gold;">
+
+		<div class="son" style="float:right;">sdfsadf</div>
+		<div style="clear:both;">ss</div>
+	</div>
+	<h1>去除浮动：bfc[overflow:hidden]</h1>
+	<div class="pa" style="border:5px solid gold;overflow:hidden;">
+
+		<div class="son" style="float:right;">sdfsadf</div>
+	</div>
+   <h1>去除浮动：bfc[overflow:auto]</h1>
+	<div class="pa" style="border:5px solid gold;overflow:hidden;">
+
+		<div class="son" style="float:right;">sdfsadf</div>
+	</div>
+	<h1>去除浮动：bfc</h1>
+	<div class="pa" style="border:5px solid gold;width:100%;position: absolute;">
+
+		<div class="son" style="float:right;">sdfsadf</div>
+
+	</div>
+		<p style="padding:100px;border:2px solid red;">gjhkkkkkkkkkf</p>
+</body>
+</html>

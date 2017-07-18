@@ -1,4 +1,4 @@
-#JS中的类型检测
+﻿# JS中的类型检测
 
 ## 判断js对象类型之Object.prototype.toString.call(obj)
 
@@ -28,7 +28,7 @@ Object.prototype.toString.call(/abc?/ig)
 "[object RegExp]"
 ```
 
-##typeof
+## typeof
 使用typeof判定对象类型有局限性，我们从判定结果来看局限性：
 
 ```javascript

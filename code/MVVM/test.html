@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<style>
+			.main{
+				height: 100%;
+				background-color: gray;
+			}
+		</style>
+		<script src='./Observer.js'></script>
+	</head>
+	<body>
+		<div id="main">
+			<h1>{{name}}</h1>
+			<input type="text" v-model="name"><br>
+			<h1 v-text="age"></h1>
+			<input type="text" v-model="age"><br>
+			<input type="button" v-on:click="functest">
+		</div>
+	</body>
+</html>
