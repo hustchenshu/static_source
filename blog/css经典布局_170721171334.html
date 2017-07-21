@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css经典布局.md—F:\githubsrc\blog</title>
+    <style type="text/css">
+    html{font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}body{margin: 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block}audio,canvas,progress,video{display: inline-block;vertical-align: baseline}audio:not([controls]){display: none;height: 0}[hidden],template{display: none}a{background: transparent}a:active,a:hover{outline: 0}abbr[title]{border-bottom: 1px dotted}b,strong{font-weight: bold}dfn{font-style: italic}h1{font-size: 2em;margin: 0.67em 0}mark{background: #ff0;color: #000}small{font-size: 80%}sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}sup{top: -0.5em}sub{bottom: -0.25em}img{border: 0}svg:not(:root){overflow: hidden}figure{margin: 1em 40px}hr{box-sizing: content-box;height: 0}pre{overflow: auto}code,kbd,pre,samp{font-family: monospace, monospace;font-size: 1em}button,input,optgroup,select,textarea{color: inherit;font: inherit;margin: 0}button{overflow: visible}button,select{text-transform: none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;cursor: pointer}button[disabled],html input[disabled]{cursor: default}button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0}input{line-height: normal}input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto}input[type="search"]{-webkit-appearance: textfield;box-sizing: content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none}fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em}legend{border: 0;padding: 0}textarea{overflow: auto}optgroup{font-weight: bold}table{border-collapse: collapse;border-spacing: 0}td,th{padding: 0}*{box-sizing: border-box}input,select,textarea,button{font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"}body{min-width: 1020px;font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";color: #333;background-color: #fff}a{color: #4183c4;text-decoration: none}a:hover,a:active{text-decoration: underline}hr,.rule{height: 0;margin: 15px 0;overflow: hidden;background: transparent;border: 0;border-bottom: 1px solid #ddd}hr:before,.rule:before{display: table;content: ""}hr:after,.rule:after{display: table;clear: both;content: ""}h1,h2,h3,h4,h5,h6{margin-top: 15px;margin-bottom: 15px;line-height: 1.1}h1{font-size: 30px}h2{font-size: 21px}h3{font-size: 16px}h4{font-size: 14px}h5{font-size: 12px}h6{font-size: 11px}small{font-size: 90%}blockquote{margin: 0}.lead{margin-bottom: 30px;font-size: 20px;font-weight: 300;color: #555}.text-muted{color: #999}.text-danger{color: #bd2c00}.text-emphasized{font-weight: bold;color: #333}ul,ol{padding: 0;margin-top: 0;margin-bottom: 0}ol ol,ul ol{list-style-type: lower-roman}ul ul ol,ul ol ol,ol ul ol,ol ol ol{list-style-type: lower-alpha}dd{margin-left: 0}tt,code{font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;font-size: 12px}pre{margin-top: 0;margin-bottom: 0;font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace}#realtime .status{overflow: visible;position: absolute;top: -5px;left: 0;background: url("/public/images/github-status.png");width: 26px;height: 26px;display: block;margin: 0 5px 0 0}#realtime .up{background-position: 0 0}#realtime .problem{background-position: 0 -53px}#realtime .down{background-position: 0 -26px}.container{max-width: 920px;margin: 0 auto 20px auto}#header{background: #FAFAFA;background: -moz-linear-gradient(#FAFAFA, #EAEAEA);background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";border-bottom: 1px solid #CACACA;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4),0 0 10px rgba(0, 0, 0, 0.1)}#markup{padding: 3px}#markup article{padding-top: 30px}.markdown-body{overflow: hidden;font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;font-size: 16px;line-height: 1.6;word-wrap: break-word}.markdown-body>*:first-child{margin-top: 0 !important}.markdown-body>*:last-child{margin-bottom: 0 !important}.markdown-body .absent{color: #c00}.markdown-body .anchor{position: absolute;top: 0;left: 0;display: block;padding-right: 6px;padding-left: 30px;margin-left: -30px}.markdown-body .anchor:focus{outline: none}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position: relative;margin-top: 1em;margin-bottom: 16px;font-weight: bold;line-height: 1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display: none;color: #000;vertical-align: middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{padding-left: 8px;margin-left: -30px;text-decoration: none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display: inline-block}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code{font-size: inherit}.markdown-body h1{padding-bottom: 0.3em;font-size: 2.25em;line-height: 1.2;border-bottom: 1px solid #eee}.markdown-body h1 .anchor{line-height: 1}.markdown-body h2{padding-bottom: 0.3em;font-size: 1.75em;line-height: 1.225;border-bottom: 1px solid #eee}.markdown-body h2 .anchor{line-height: 1}.markdown-body h3{font-size: 1.5em;line-height: 1.43}.markdown-body h3 .anchor{line-height: 1.2}.markdown-body h4{font-size: 1.25em}.markdown-body h4 .anchor{line-height: 1.2}.markdown-body h5{font-size: 1em}.markdown-body h5 .anchor{line-height: 1.1}.markdown-body h6{font-size: 1em;color: #777}.markdown-body h6 .anchor{line-height: 1.1}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre{margin-top: 0;margin-bottom: 16px}.markdown-body hr{height: 4px;padding: 0;margin: 16px 0;background-color: #e7e7e7;border: 0 none}.markdown-body ul,.markdown-body ol{padding-left: 2em}.markdown-body ul.no-list,.markdown-body ol.no-list{padding: 0;list-style-type: none}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul{margin-top: 0;margin-bottom: 0}.markdown-body li>p{margin-top: 16px}.markdown-body dl{padding: 0}.markdown-body dl dt{padding: 0;margin-top: 16px;font-size: 1em;font-style: italic;font-weight: bold}.markdown-body dl dd{padding: 0 16px;margin-bottom: 16px}.markdown-body blockquote{padding: 0 15px;color: #777;border-left: 4px solid #ddd}.markdown-body blockquote>:first-child{margin-top: 0}.markdown-body blockquote>:last-child{margin-bottom: 0}.markdown-body table{display: block;width: 100%;overflow: auto;word-break: normal;word-break: keep-all}.markdown-body table th{font-weight: bold}.markdown-body table th,.markdown-body table td{padding: 6px 13px;border: 1px solid #ddd}.markdown-body table tr{background-color: #fff;border-top: 1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color: #f8f8f8}.markdown-body img{max-width: 100%;box-sizing: border-box}.markdown-body span.frame{display: block;overflow: hidden}.markdown-body span.frame>span{display: block;float: left;width: auto;padding: 7px;margin: 13px 0 0;overflow: hidden;border: 1px solid #ddd}.markdown-body span.frame span img{display: block;float: left}.markdown-body span.frame span span{display: block;padding: 5px 0 0;clear: both;color: #333}.markdown-body span.align-center{display: block;overflow: hidden;clear: both}.markdown-body span.align-center>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: center}.markdown-body span.align-center span img{margin: 0 auto;text-align: center}.markdown-body span.align-right{display: block;overflow: hidden;clear: both}.markdown-body span.align-right>span{display: block;margin: 13px 0 0;overflow: hidden;text-align: right}.markdown-body span.align-right span img{margin: 0;text-align: right}.markdown-body span.float-left{display: block;float: left;margin-right: 13px;overflow: hidden}.markdown-body span.float-left span{margin: 13px 0 0}.markdown-body span.float-right{display: block;float: right;margin-left: 13px;overflow: hidden}.markdown-body span.float-right>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: right}.markdown-body code,.markdown-body tt{padding: 0;padding-top: 0.2em;padding-bottom: 0.2em;margin: 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px}.markdown-body code:before,.markdown-body code:after,.markdown-body tt:before,.markdown-body tt:after{letter-spacing: -0.2em;content: "\00a0"}.markdown-body code br,.markdown-body tt br{display: none}.markdown-body del code{text-decoration: inherit}.markdown-body pre>code{padding: 0;margin: 0;font-size: 100%;word-break: normal;white-space: pre;background: transparent;border: 0}.markdown-body .highlight{margin-bottom: 16px}.markdown-body .highlight pre,.markdown-body pre{padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f7f7f7;border-radius: 3px}.markdown-body .highlight pre{margin-bottom: 0;word-break: normal}.markdown-body pre{word-wrap: normal}.markdown-body pre code,.markdown-body pre tt{display: inline;max-width: initial;padding: 0;margin: 0;overflow: initial;line-height: inherit;word-wrap: normal;background-color: transparent;border: 0}.markdown-body pre code:before,.markdown-body pre code:after,.markdown-body pre tt:before,.markdown-body pre tt:after{content: normal}.markdown-body kbd{display: inline-block;padding: 3px 5px;font-size: 11px;line-height: 10px;color: #555;vertical-align: middle;background-color: #fcfcfc;border: solid 1px #ccc;border-bottom-color: #bbb;border-radius: 3px;box-shadow: inset 0 -1px 0 #bbb}.codehilite{background: #ffffff}.codehilite .c{color: #999988;font-style: italic}.codehilite .err{color: #a61717;background-color: #e3d2d2}.codehilite .k{color: #000000;font-weight: bold}.codehilite .o{color: #000000;font-weight: bold}.codehilite .cm{color: #999988;font-style: italic}.codehilite .cp{color: #999999;font-weight: bold}.codehilite .c1{color: #999988;font-style: italic}.codehilite .cs{color: #999999;font-weight: bold;font-style: italic}.codehilite .gd{color: #000000;background-color: #ffdddd}.codehilite .gd .x{color: #000000;background-color: #ffaaaa}.codehilite .ge{color: #000000;font-style: italic}.codehilite .gr{color: #aa0000}.codehilite .gh{color: #999999}.codehilite .gi{color: #000000;background-color: #ddffdd}.codehilite .gi .x{color: #000000;background-color: #aaffaa}.codehilite .go{color: #888888}.codehilite .gp{color: #555555}.codehilite .gs{font-weight: bold}.codehilite .gu{color: #aaaaaa}.codehilite .gt{color: #aa0000}.codehilite .kc{color: #000000;font-weight: bold}.codehilite .kd{color: #000000;font-weight: bold}.codehilite .kp{color: #000000;font-weight: bold}.codehilite .kr{color: #000000;font-weight: bold}.codehilite .kt{color: #445588;font-weight: bold}.codehilite .m{color: #009999}.codehilite .s{color: #d14}.codehilite .na{color: #008080}.codehilite .nb{color: #0086B3}.codehilite .nc{color: #445588;font-weight: bold}.codehilite .no{color: #008080}.codehilite .ni{color: #800080}.codehilite .ne{color: #990000;font-weight: bold}.codehilite .nf{color: #990000;font-weight: bold}.codehilite .nn{color: #555555}.codehilite .nt{color: #000080}.codehilite .nv{color: #008080}.codehilite .ow{color: #000000;font-weight: bold}.codehilite .w{color: #bbbbbb}.codehilite .mf{color: #009999}.codehilite .mh{color: #009999}.codehilite .mi{color: #009999}.codehilite .mo{color: #009999}.codehilite .sb{color: #d14}.codehilite .sc{color: #d14}.codehilite .sd{color: #d14}.codehilite .s2{color: #d14}.codehilite .se{color: #d14}.codehilite .sh{color: #d14}.codehilite .si{color: #d14}.codehilite .sx{color: #d14}.codehilite .sr{color: #009926}.codehilite .s1{color: #d14}.codehilite .ss{color: #990073}.codehilite .bp{color: #999999}.codehilite .vc{color: #008080}.codehilite .vg{color: #008080}.codehilite .vi{color: #008080}.codehilite .il{color: #009999}
+    </style>
+    <style type="text/css">
+      .markdown-body hr{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="markup">
+        <article id="content" class="markdown-body">
+          <style>
+    div{
+        padding: 0;
+        margin: 0;
+        /*overflow: hidden;*/
+        box-sizing: border-box;
+    }
+    .containe{
+        border: 3px solid gold;
+        height:300px;
+    }
+    .left{
+        height: 100%;
+        border:  2px solid green;
+    }
+    .right{
+        height: 100%;
+        border: 2px solid red;
+    }
+    .col{
+        height: 100%;
+        border:2px solid blue;
+    }
+    .row{
+        border:2px solid orange;
+    }
+    .top,.bottom{
+        border:2px solid cyan;
+    }
+</style>
+
+<h1>一.两栏布局</h1>
+<p>该布局方式非常常见，适用于定宽的一侧常为导航，自适应的一侧为内容的布局</p>
+<h2>1.左列定宽，右列自适应</h2>
+<h3>1&gt;实现一：float+margin</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;float:left;width:200px;&quot;&gt;这里是左侧导航栏区域，固定宽度为200px；&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;margin-left:200px;&quot;&gt;这里是可伸缩区域&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="left" style="float:left;width:200px;">这里是左侧导航栏区域，固定宽度为200px；</div>
+    <div class="right" style="margin-left:200px;">这里是可伸缩区域</div>
+</div></p>
+<h3>2&gt;实现二：float+BFC</h3>
+<p>overflow:hidden，触发bfc模式，浮动无法影响，隔离其他元素，IE6不支持，左侧left设置margin-left当作left与right之间的边距，右侧利用overflow:hidden 进行形成bfc模式.</p>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;width:200px;float:left;&quot;&quot;&gt;左侧定宽200；而且左浮动&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;overflow:hidden&quot;&gt;这里是自动调节区域，并使用overflow:hidden从而触发了BFC&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="left" style="width:200px;float:left;"">左侧定宽200；而且左浮动</div>
+    <div class="right" style="overflow:hidden">这里是自动调节区域，并使用overflow:hidden从而触发了BFC</div>
+</div></p>
+<p><strong>这里若不触发BFC，那么，.right将与父对象同宽（100%），尽管其中的内容不会进入到左侧浮动区域，但是当左侧导航栏较短时可能出现下面的情况(如下左)；若右侧形成了BFC就不会出现这样的问题了（如下右）</strong>
+<div style="display:flex;border:0;justify-content:space-around;">
+  <div class="containe" style="width:40%">
+    <div class="left" style="width:200px;height:30px;float:left;"">左侧定宽200；而且左浮动</div>
+    <div class="right">这里是自动调节区域，没有使用overflow:hidden。BFCffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</div>
+    </div> 
+    <div class="containe" style="width:40%">
+    <div class="left" style="width:200px;height:30px;float:left;"">左侧定宽200；而且左浮动</div>
+    <div class="right" style="overflow:hidden">这里是自动调节区域，没有使用overflow:hidden。BFCffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</div>
+</div> 
+</div></p>
+<h3>3&gt;实现三：table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;table-layout:fixed;width:100%&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;table-layout:fixed;width:100%">
+    <div class="left" style="width:200px;display:table-cell;"></div>
+    <div class="right" style="display:table-cell;"></div>
+</div></p>
+<h3>4&gt;实现四：flex布局</h3>
+<p>利用右侧容器的flex:1，均分了剩余的宽度，也实现了同样的效果。而align-items 默认值为stretch，故二者高度相等
+<strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;width:200px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;">
+    <div class="left" style="width:200px;"></div>
+    <div class="right" style="flex:1"></div>
+</div></p>
+<h2>2.右列定宽，左列自适应</h2>
+<h3>1&gt;float+margin</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;&quot;&gt;
+    &lt;div class=&quot;right&quot; style=&quot;float:right;width:200px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;left&quot; style=&quot;margin-right:200px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="">
+    <div class="right" style="float:right;width:200px;"></div>
+    <div class="left" style="margin-right:200px;"></div>
+</div></p>
+<h3>2&gt;table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;width:100%&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;display:table-cell;flex:1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;display:table-cell;width:200px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;width:100%">
+    <div class="left" style="display:table-cell;"></div>
+    <div class="right" style="display:table-cell;width:200px;"></div>
+</div></p>
+<h3>3&gt;flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;width:200px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;">
+    <div class="left" style="flex:1"></div>
+    <div class="right" style="width:200px;"></div>
+</div></p>
+<h2>3.一列不定宽，一列自适应</h2>
+<h3>1&gt; flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt; 
+    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;">
+    <div class="left" style="flex:1">这一列填充右侧剩下的空间</div> 
+    <div class="right">这一列根据自身内容调节自身的宽度</div>
+</div></p>
+<h3>2&gt; float+overflow</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;float:left&quot;&gt;这一列自动分局自身的内容调节宽度&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;overflow:hidden;&quot;&gt;这一列自动填充左侧剩下的空间&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="left" style="float:left">这一列自动分局自身的内容调节宽度</div>
+    <div class="right" style="overflow:hidden;">这一列自动填充左侧剩下的空间</div>
+</div></p>
+<h3>3&gt; table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;width:100%;&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;width:100%;">
+    <div class="left" style="display:table-cell;width:0.1%">这一列自动扩展，根据自身的内容调节自身的div宽度</div>
+    <div class="right" style="display:table-cell;">这一列自动填充剩下的空间</div>
+</div></p>
+<h1>二.多栏布局</h1>
+<h2>1.两列定宽，一列自适应</h2>
+<h3>1&gt; flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;&quot;&gt;&lt;/div&gt;   
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;">
+    <div class="col" style="width:200px;"></div> <br>
+    <div class="col" style="width:200px;"></div>
+    <div class="right" style="flex:1"></div>
+</div></p>
+<h3>2&gt; float+overflow</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:left;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:left;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;overflow:hidden;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="col" style="width:200px;float:left;"></div>
+    <div class="col" style="width:200px;float:left;"></div>
+    <div class="right" style="overflow:hidden;"></div>
+</div></p>
+<h3>3&gt; float+margin</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:left;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:left;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;margin-left:400px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="col" style="width:200px;float:left;"></div>
+    <div class="col" style="width:200px;float:left;"></div>
+    <div class="right" style="margin-left:400px;"></div>
+</div></p>
+<h3>4&gt; table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;width:100%;&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;width:100%;">
+    <div class="col" style="width:200px;display:table-cell;"></div>
+    <div class="col" style="width:200px;display:table-cell;"></div>
+    <div class="right" style="display:table-cell;"></div>
+</div></p>
+<h2>2.双飞翼布局（两侧定宽，中栏自适应）</h2>
+<h3>1&gt; flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;&quot;&gt;
+    &lt;div class=&quot;left&quot; style=&quot;width:200px;&quot;&gt;&lt;/div&gt;     
+    &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt; 
+    &lt;div class=&quot;right&quot; style=&quot;width:200px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;">
+    <div class="left" style="width:200px;"></div>   <br>
+    <div class="col" style="flex:1"></div> 
+    <div class="right" style="width:200px;"></div>
+</div></p>
+<h3>2&gt; float+overflow</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:left;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:right;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;overflow:hidden;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="col" style="width:200px;float:left;"></div>
+    <div class="col" style="width:200px;float:right;"></div>
+    <div class="right" style="overflow:hidden;"></div>
+</div></p>
+<h3>3&gt; float+margin</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:left;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;float:right;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;margin:0 200px 0 200px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="col" style="width:200px;float:left;"></div>
+    <div class="col" style="width:200px;float:right;"></div>
+    <div class="right" style="margin:0 200px 0 200px;"></div>
+</div></p>
+<h3>4&gt; table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;width:100%;&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt; 
+    &lt;div class=&quot;right&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;width:200px;display:table-cell;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;width:100%;">
+    <div class="col" style="width:200px;display:table-cell;"></div> 
+    <div class="right" style="display:table-cell;"></div>
+    <div class="col" style="width:200px;display:table-cell;"></div>
+</div></p>
+<h2>3.多列等分</h2>
+<h3>1&gt;float</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe">
+    <div class="col" style="float:left;width:25%;padding:20px;"></div>
+    <div class="col" style="float:left;width:25%;padding:20px;""></div>
+    <div class="col" style="float:left;width:25%;padding:20px;""></div>
+    <div class="col" style="float:left;width:25%;padding:20px;""></div>
+</div></p>
+<h3>2&gt;table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;width:100%;&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;display:table-cell;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;width:100%;">
+    <div class="col" style="display:table-cell;"></div>
+    <div class="col" style="display:table-cell;"></div>
+    <div class="col" style="display:table-cell;"></div>
+    <div class="col" style="display:table-cell;"></div>
+</div></p>
+<h3>3&gt;flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex&quot;&gt;
+    &lt;div class=&quot;col&quot; style=&quot;flex:1;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;flex:1;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;flex:1;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot; style=&quot;flex:1;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex">
+    <div class="col" style="flex:1;"></div>
+    <div class="col" style="flex:1;"></div>
+    <div class="col" style="flex:1;"></div>
+    <div class="col" style="flex:1;"></div>
+</div></p>
+<h1>三.九宫格布局</h1>
+<h3>1&gt;table</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:table;width:100%;&quot;&gt;
+    &lt;div class=&quot;row&quot; style=&quot;display:table-row;&quot;&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot; style=&quot;display:table-row;&quot;&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot; style=&quot;display:table-row;&quot;&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;display:table-cell;height:100px;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:table;width:100%;">
+    <div class="row" style="display:table-row;">
+        <div class="col" style="display:table-cell;height:100px;"></div>
+        <div class="col" style="display:table-cell;height:100px;"></div>
+        <div class="col" style="display:table-cell;height:100px;"></div>
+    </div>
+    <div class="row" style="display:table-row;">
+        <div class="col" style="display:table-cell;height:100px;"></div>
+        <div class="col" style="display:table-cell;height:100px;"></div>
+        <div class="col" style="display:table-cell;height:100px;"></div>
+    </div>
+    <div class="row" style="display:table-row;">
+        <div class="col" style="display:table-cell;height:100px;"></div>
+        <div class="col" style="display:table-cell;height:100px;"></div>
+        <div class="col" style="display:table-cell;height:100px;"></div>
+    </div>
+</div></p>
+<h3>2&gt;flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;flex-direction:column;&quot;&gt;
+    &lt;div class=&quot;row&quot; style=&quot;height:100px;display:flex;&quot;&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot; style=&quot;height:100px;display:flex;&quot;&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot; style=&quot;height:100px;display:flex;&quot;&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;col&quot; style=&quot;flex:1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;flex-direction:column;">
+    <div class="row" style="height:100px;display:flex;">
+        <div class="col" style="flex:1"></div>
+        <div class="col" style="flex:1"></div>
+        <div class="col" style="flex:1"></div>
+    </div>
+    <div class="row" style="height:100px;display:flex;">
+        <div class="col" style="flex:1"></div>
+        <div class="col" style="flex:1"></div>
+        <div class="col" style="flex:1"></div>
+    </div>
+    <div class="row" style="height:100px;display:flex;">
+        <div class="col" style="flex:1"></div>
+        <div class="col" style="flex:1"></div>
+        <div class="col" style="flex:1"></div>
+    </div>
+</div></p>
+<h1>四.全屏布局</h1>
+<h3>１&gt;绝对定位</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;position:relative;&quot;&gt;
+    &lt;div class=&quot;top&quot; style=&quot;position:absolute;top:0;left:0;height:50px;width:100%;&quot;&gt;top:宽度为100%；高度固定为50px&lt;/div&gt;
+    &lt;div class=&quot;left&quot; style=&quot;position:absolute;top:50px;left:0;bottom:50px;height:auto;width:100px;&quot;&gt;左侧为固定宽度50px&lt;/div&gt;
+    &lt;div class=&quot;right&quot; style=&quot;position:absolute;top:50px;bottom:50px;left:100px;right:0;overflow:auto;height:auto;&quot;&gt;右侧为自适应区域&lt;/div&gt;
+    &lt;div class=&quot;bottom&quot; style=&quot;position:absolute;bottom:0;left:0;height:50px;width:100%&quot;&gt;底部为固定高度50&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="position:relative;">
+    <div class="top" style="position:absolute;top:0;left:0;height:50px;width:100%;">top:宽度为100%；高度固定为50px</div>
+    <div class="left" style="position:absolute;top:50px;left:0;bottom:50px;height:auto;width:100px;">左侧为固定宽度50px</div>
+    <div class="right" style="position:absolute;top:50px;bottom:50px;left:100px;right:0;overflow:auto;height:auto;">右侧为自适应区域</div>
+    <div class="bottom" style="position:absolute;bottom:0;left:0;height:50px;width:100%">底部为固定高度50</div>
+</div></p>
+<h3>2&gt;flex</h3>
+<p><strong>示例</strong></p>
+<div class="codehilite"><pre>&lt;div class=&quot;containe&quot; style=&quot;display:flex;flex-direction:column;&quot;&gt;
+    &lt;div class=&quot;top&quot; style=&quot;height:50px;&quot;&gt;top:宽度为100%；高度固定为50px&lt;/div&gt;
+    &lt;div class=&quot;middle&quot; style=&quot;flex:1;display:flex;&quot;&gt;
+        &lt;div class=&quot;left&quot; style=&quot;width:200px;height:auto;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;right&quot; style=&quot;flex:1;height:auto;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bottom&quot; style=&quot;height:50px;&quot;&gt;底部为固定高度50&lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<p><strong>效果</strong>
+<div class="containe" style="display:flex;flex-direction:column;">
+    <div class="top" style="height:50px;">top:宽度为100%；高度固定为50px</div>
+    <div class="middle" style="flex:1;display:flex;">
+        <div class="left" style="width:200px;height:auto;"></div>
+        <div class="right" style="flex:1;height:auto;"></div>
+    </div>
+    <div class="bottom" style="height:50px;">底部为固定高度50</div>
+</div></p>
+<h1>总结：</h1>
+<p>根据上面的各种各样的css样式布局，可以看出来，其实不管是怎样布局，怎么都是下面几种思路：</p>
+<ul>
+<li>绝对布局</li>
+<li>float+margin</li>
+<li>float+BFC</li>
+<li>table</li>
+<li>flex</li>
+</ul>
+<h2>绝对布局</h2>
+<p>其中，<strong>绝对布局</strong>主要是针对两种，一类是对于整个页面视窗的布局，如悬浮的导航区和回到顶部等功能按钮，这是就是借助于position:fixed；另一种是相对于父容器内的绝对布局，即position:absolute，这里需要注意的是，其布局参考对象应该是包含该元素的第一个position不为static的祖先元素，因此，我们在使用的时候一般指定父对象的position为relative；</p>
+<h2>float+margin</h2>
+<p><strong>float+margin</strong>的思路比较简单，一般用于左右的布局，而且其中一方有固定宽度，而另一方则设定该方向的margin为固定宽度值。</p>
+<h2>float+BFC</h2>
+<p><strong>float+BFC</strong>其实主要是利用了BFC的形成条件和其特性，这里简要说一下（个人理解），首先是形成条件：
+以下满足其一即可：</p>
+<ul>
+<li>float不为none；</li>
+<li>overflow不为visible；</li>
+<li>绝对定位（absolute和fixed）</li>
+<li>display为inline-block、table-caption或table-cell；</li>
+</ul>
+<p>此外，flex似乎会破坏BFC的形成，这点尚需验证；</p>
+<p>那么BFC有什么特性呢？
+BFC中的元素布局不受外界影响，在同一个BFC中两个毗邻的块级盒在垂直方向的margin会重叠，每个盒子的左外边框紧挨包含块的左边框；换一种说法：</p>
+<p>在一个BFC中，垂直方向上，盒子是从包含块顶部开始一个挨着一个布局的，两个相邻的盒子的垂直距离是由margin属性决定的，在一个BFC中的两个相邻的块级盒子的垂直外边距会产生塌陷。
+在一个BFC中，水平方向上，每个盒子的左边缘都会接触包含块的左边缘（从右向左的格式则相反）。除非出现浮动元素和其他元素相互作用的情况（当有浮动元素时，行盒可能因浮动元素而收缩，如果有盒子形成了新的BFC，那这个盒子也可能因浮动元素而变窄）。</p>
+<p>如果想要更加深入的研究可以参考<a href="http://www.jianshu.com/p/8858828987be">http://www.jianshu.com/p/8858828987be</a></p>
+<h2>table与flex布局</h2>
+<p>这两者布局主要是利用了响应布局的一些默认属性，使用起来非常方便，具体可以参看资料</p>
+<ul>
+<li><a href="http://www.runoob.com/w3cnote/flex-grammar.html">http://www.runoob.com/w3cnote/flex-grammar.html</a></li>
+<li><a href="http://www.cnblogs.com/guoyong-feng/p/6076058.html">css Table布局-display:table</a></li>
+</ul>
+<h1>注：</h1>
+<p>为了效果明显，文中使用的css类如下：</p>
+<div class="codehilite"><pre>    div{
+        padding: 0;
+        margin: 0;
+        /*overflow: hidden;*/
+        box-sizing: border-box;
+    }
+    .containe{
+        border: 3px solid gold;
+        height:300px;
+    }
+    .left{
+        height: 100%;
+        border:  2px solid green;
+    }
+    .right{
+        height: 100%;
+        border: 2px solid red;
+    }
+    .col{
+        height: 100%;
+        border:2px solid blue;
+    }
+    .row{
+        border:2px solid orange;
+    }
+    .top,.bottom{
+        border:2px solid cyan;
+    }
+</pre></div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
