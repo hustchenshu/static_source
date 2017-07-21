@@ -1,0 +1,62 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+		<style>
+			body,document,stylesheet,figure,div{
+				padding: 0;
+				margin: 0;
+			}
+			figure{
+				border: 1px solid red;
+			}
+			.show{				
+				height: 100vh;
+				margin: 20px;
+				border: solid 4px gold
+			}
+			figure>div{
+				border: 1px solid gold;
+			}
+			.left,.right{
+				border: 1px solid red;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<figure class="view">
+			<h1>1.两栏布局</h1>
+			<h2>1.1左列定宽，右列自适应</h2>
+			<h3>1.1.1使用float+margin实现</h3>
+			<div class="show">	
+				<div class="left" style="float:left;width:200px;">left</div>
+				<div class="right" style="margin-left:200px;">right</div>		
+			</div>
+			<h2>1.2右列定宽，左列自适应</h2>
+			<div class="show">			
+			</div>
+		</figure>
+		<figure class="view">
+			<h1>多栏布局</h1>
+			<div class="show"></div>
+		</figure>
+		<figure class="view">
+			<h1>三列布局</h1>
+			<div class="show"></div>
+		</figure>
+		<figure class="view">
+			<h1>圣杯布局</h1>
+			<div class="show"></div>
+		</figure>
+		<figure class="view">
+			<h1>双飞翼布局</h1>
+			<div class="show"></div>
+		</figure>
+
+		<figure class="view">
+			<h1></h1>
+			<div class="show"></div>
+		</figure>
+
+	</body>
+</html>

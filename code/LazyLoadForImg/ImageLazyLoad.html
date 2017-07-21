@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.img{
+				height: 500px;
+				border: 2px solid gold;
+			}
+			div{
+				padding: 20px;
+				overflow: hidden;
+			}
+			#info{
+				position: fixed;
+				color: white;
+				font-size: 12px;
+				left:20px;
+				width: 10vw;
+				height: 90vh;
+				border: 2px solid gray;
+				background: rgba(22,22,22,.3);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="info">
+			
+		</div>
+		<div class="ver">
+			<div class="img"><img  alt="加载中" data-index=1 data-src="http://az619822.vo.msecnd.net/files/CrescentCityConnection_EN-US11247361628_1366x768.jpg"></div>		
+			<div class="img"><img  alt="加载中" data-index=2 data-src="http://az608707.vo.msecnd.net/files/FelgueirasLighthouse_EN-US11198579022_1366x768.jpg"></div>
+			<div class="img"><img  alt="加载中" data-index=3 data-src="http://az608707.vo.msecnd.net/files/ColorfulSalt_EN-US13586718897_1366x768.jpg"></div>
+			<div class="img"><img  alt="加载中" data-index=4 data-src="http://az619822.vo.msecnd.net/files/TuileriesGardenWheel_EN-US11916079727_1366x768.jpg"></div>
+			<div class="img"><img  alt="加载中" data-index=5 data-src="http://az619519.vo.msecnd.net/files/LagazuoiRefuge_EN-US12120955316_1366x768.jpg"></div>
+			<div class="img"><img  alt="加载中" data-index=6 data-src="http://az619519.vo.msecnd.net/files/GhostCrab_EN-US12586461381_1366x768.jpg"></div>
+			<div class="img"><img  alt="加载中" data-index=7 data-src="http://az608707.vo.msecnd.net/files/MartapuraMarket_EN-US9502204987_1366x768.jpg"></div>
+		</div>
+	</body>
+	<script>
+		var infoDiv = document.getElementById("info");
+		var delay;
+		// 当加载完成，检测并加载可视范围内的图片
+		window.onload= checkAllImgs;
+		// 添加滚动监听，即可视范围变化时检测当前范围内的图片是否可以加载了
+		window.addEventListener("scroll",function(){
+			clearTimeout(delay);
+			delay = setTimeout(function(){
+				checkAllImgs();
+			},50)
+		})
+
+		// 检测所有图片，并给视窗中的图片的src属性赋值，即开始加载；
+		function checkAllImgs(){
+			var imgs = document.querySelectorAll("img");
+			Array.prototype.forEach.call(imgs,function(el){
+				if(isInSight(el)){
+					loadImg(el);
+				}
+			})
+		}
+		// 开始加载指定el的资源
+		function loadImg(el){
+			var eldom = typeof el == 'object'?el:document.querySelector(el);
+			if(!eldom.src){
+				var source = eldom.getAttribute("data-src");
+				var index = eldom.getAttribute("data-index");
+				eldom.src = source; 
+				console.log("第"+index+"张图片进入视窗，开始加载。。。。")
+				infoDiv.innerHTML += "第"+index+"张图片进入视窗，开始加载。。。。<br>"
+			}
+			
+		}
+		// 判断指定el是否在视窗内
+		function isInSight(el){
+			var eldom = typeof el == 'object'?el:document.querySelector(el);
+			var bound = eldom.getBoundingClientRect();
+			// 这里的bound包含了el距离视窗的距离；
+			// bound.left是元素距离窗口左侧的距离值；
+			// bound.top是袁术距离窗口顶端的距离值；
+
+			// 以以上两个数值判断元素是否进入视窗；
+			return (bound.top>=0&&bound.left>=0)&&(bound.top<=window.innerHeight+20)&&(bound.left<=window.innerWidth+20);
+		}
+	</script>
+</html>

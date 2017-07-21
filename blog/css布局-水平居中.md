@@ -14,6 +14,28 @@
 <div style="border:solid 2px red;">parent
     <div style="width:200px;height:50px;border:solid;margin:0 auto;">child</div>
 </div>
+**当然，我们也可以使用max-width来设定宽度**
+```
+<div style="border:solid 2px red;">parent
+    <div style="max-width:600px;height:50px;border:solid;margin:0 auto;">child</div>
+</div>
+```
+<div style="border:solid 2px red;">parent
+    <div style="max-width:600px;height:50px;border:solid;margin:0 auto;">child</div>
+</div>
+
+**若希望不设定居中div的宽度，那么可以接祖与table来实现**
+**示例**
+```
+<div style="border:solid 2px red;">
+    <div style="margin:0 auto;display:table;border:solid 2px gold;">   child   </div>
+</div>
+```
+**效果**
+
+<div style="border:solid 2px red;">
+    <div style="margin:0 auto;display:table;border:solid 2px gold;">   child   </div>
+</div>
 
 ## 1.2 绝对定位
 
@@ -75,7 +97,65 @@ inherit |从父元素继承该属性。
 </div>
 ## 1.4使用inline-block和text-align
 
+**示例**
+```
+<div style="text-align:center;border:solid 2px red;">
+    <div style="display: inline-block;border:solid;margin:0 auto;">child</div>
+</div>
+```
+
+**效果**
 <div style="text-align:center;border:solid 2px red;">
     <div style="display: inline-block;border:solid;margin:0 auto;">child</div>
 </div>
 **后续将补充完善**
+
+# 2.垂直居中
+
+##　2.1vertical-align
+首先我们需要弄清楚vertical-align的使用，这个属性是**inline-block依赖型元素**，也就是说,只有一个元素属于inline或是inline-block（table-cell也可以理解为inline-block水平）水平，其身上的vertical-align属性才会起作用。
+
+因此，可以使用一下方法来实现垂直居中：
+
+**示例1**
+```
+<div class="parent" style="border:solid 2px gold;height:300px;width:300px;display:table-cell;vertical-align:middle;"</div>
+    <div class="son" style="border:solid 1px red;">child</div>
+</div>
+```
+
+**效果1**
+<div class="parent" style="border:solid 2px gold;height:300px;width:300px;display:table-cell;vertical-align:middle;"</div>
+    <div class="son" style="border:solid 1px red;">child</div>
+</div>
+
+## 2.2绝对定位
+借助于absolute相对于其父对象（父对象position为非static）定位来实现居中；
+
+**示例1**
+```
+<div class="parent" style="border:solid 2px gold;position:relative;height:200px;"</div>
+    <div class="son" style="border:solid 1px red;position:absolute;top:50%;transform:translate(0,-50%);">child</div>
+</div>
+```
+
+**效果1**
+<div class="parent" style="border:solid 2px gold;position:relative;height:200px;"</div>
+    <div class="son" style="border:solid 1px red;position:absolute;top:50%;transform:translate(0,-50%);">child</div>
+</div>
+
+
+## 2.3借助flex布局
+
+**示例1**
+```
+<div class="parent" style="border:solid 2px gold;position:relative;height:200px;"</div>
+    <div class="son" style="border:solid 1px red;position:absolute;top:50%;transform:translate(0,-50%);">child</div>
+</div>
+```
+
+**效果1**
+<div class="parent" style="border:solid 2px gold;height:200px;display:flex;align-items:center"</div>
+    <div class="son" style="border:solid 1px red;">child</div>
+</div>
+
